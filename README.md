@@ -1,8 +1,10 @@
-# Nmap-MCP
+# Nmap MCP
+
+<img width="336" height="180" alt="sitelogo-2x" src="https://github.com/user-attachments/assets/eec8bfe1-87f5-4b6d-bc7e-b7d8566f87f5" />
 
 This is an AI MCP server developed based on Nmap. After pre-configuring the login information of a Kali Linux host, it automates SSH login and executes Nmap scanning commands via the Paramiko module. The server is supported by FastMCP as the underlying MCP Server and utilizes Cherry Studio as the MCP Host tool for configuration management and integration with large models. It supports adapting to any large model to parse user natural language intents, organize scan results, and ultimately enables users to initiate network scans and receive clear structured feedback through simple conversational interactions without needing to master complex Nmap command syntax.
 
-1、First, configure and install the third-party dependencies required for the project. You can directly execute the installation command using the pip package manager to deploy the paramiko module and FastMCP tool, laying the foundation for subsequent SSH remote connections and MCP server operation.
+First, configure and install the third-party dependencies required for the project. You can directly execute the installation command using the pip package manager to deploy the paramiko module and FastMCP tool, laying the foundation for subsequent SSH remote connections and MCP server operation.
 
 ```bash
 C:> pip install paramiko fastmcp
@@ -27,11 +29,11 @@ Author: Jeremiah Lowin
 Author-email:
 License-Expression: Apache-2.0
 Location: Programs\Python\Python314\Lib\site-packages
-Requires: authlib, cyclopts, exceptiongroup, httpx, jsonschema-path, mcp, openapi-pydantic, platformdirs, py-key-value-aio, pydantic, pydocket, pyperclip, python-dotenv, rich, uvicorn, websockets
+Requires: authlib, cyclopts, exceptiongroup, httpx, jsonschema-path
 Required-by:
 ```
 
-2、It is necessary to ensure that the target Kali Linux host has enabled SSH service and supports remote login (SSH port connectivity can be verified in advance). When starting the AI MCP service in the future, simply enter the IP address, administrator login account and password, and corresponding SSH connection port of the Kali Linux host to complete the service startup and establish a valid connection.
+It is necessary to ensure that the target Kali Linux host has enabled SSH service and supports remote login (SSH port connectivity can be verified in advance). When starting the AI MCP service in the future, simply enter the IP address, administrator login account and password, and corresponding SSH connection port of the Kali Linux host to complete the service startup and establish a valid connection.
 ```bash
 C:> python NmapMCP.py --hostname 192.168.136.128 --username lyshark --password 123456789 --port 22
 
