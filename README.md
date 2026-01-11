@@ -57,7 +57,7 @@ C:> python NmapMCP.py --hostname 192.168.136.128 --username lyshark --password 1
                    └──────────────────────────────────────────────────────────────────────────────┘
 
 
-[01/11/26 14:25:57] INFO     Starting MCP server 'Kali Nmap MCP' with transport 'streamable-http' on     server.py:2582
+[01/11/26 14:25:57] INFO     Starting MCP server 'Kali Nmap MCP'
                              http://0.0.0.0:8001/mcp
 ```
 
